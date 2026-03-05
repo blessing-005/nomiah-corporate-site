@@ -3,17 +3,61 @@ export default function Careers() {
   return (
     <div className="bg-white">
 
-      <section className="py-28 bg-[var(--color-primary-dark)] text-white">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+      <section className="relative h-[60vh] flex items-center justify-center text-white">
 
+        <Image
+          src="/images/team-working.jpg"
+          alt="Team working"
+          fill
+          className="object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        <div className="relative z-10 text-center px-6 max-w-3xl">
           <h1 className="text-5xl font-bold">
             Careers at NOMIAH
           </h1>
 
-          <p className="mt-6 text-lg text-gray-300">
-            Join a team dedicated to engineering secure digital infrastructure 
-            and building the future of enterprise technology.
+          <p className="mt-6 text-lg text-gray-200">
+            Join a team dedicated to engineering secure digital infrastructure
+            and building enterprise technology solutions.
           </p>
+        </div>
+
+      </section>
+
+      <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+          <Image
+            src="/images/datacenter.jpg"
+            alt="Data center"
+            width={600}
+            height={400}
+            className="rounded-xl"
+          />
+
+          <div>
+
+            <h2 className="text-3xl font-semibold text-[var(--color-primary)]">
+              Who We Are Looking For
+            </h2>
+
+            <p className="mt-4 text-gray-600">
+              NOMIAH seeks professionals who are passionate about technology,
+              digital infrastructure, cybersecurity, and enterprise systems.
+              We value individuals who think strategically, build responsibly,
+              and understand the importance of secure and scalable technology.
+            </p>
+
+            <p className="mt-4 text-gray-600">
+              Our team works on projects involving enterprise software,
+              regulatory compliance systems, digital transformation,
+              and secure infrastructure for organizations across industries.
+            </p>
+
+          </div>
 
         </div>
       </section>

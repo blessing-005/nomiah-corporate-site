@@ -37,7 +37,7 @@ export default function Footer() {
             <li>Johannesburg, South Africa</li>
             <li>info@nomiah.com</li>
             <a href="mailto:info@nomiah.com">info@nomiah.com</a>
-            <li>security@nomiah.com</li>
+            <li>010 500 8299</li>
           </ul>
         </div>
 
