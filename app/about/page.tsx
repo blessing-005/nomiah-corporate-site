@@ -1,16 +1,29 @@
+import Image from "next/image"
+
 export default function About() {
   return (
     <div className="bg-white">
 
-      <section className="py-28 bg-[var(--color-primary-dark)] text-white">
-        <div className="max-w-5xl mx-auto px-6 text-center">
+      <section className="relative h-[55vh] flex items-center justify-center text-white">
+
+        <Image
+          src="/images/team-meeting.jpg"
+          alt="Corporate Strategy"
+          fill
+          className="object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        <div className="relative z-10 text-center max-w-3xl px-6">
           <h1 className="text-5xl font-bold">About NOMIAH</h1>
-          <p className="mt-6 text-lg text-gray-300">
-            NOMIAH (Pty) Ltd is an enterprise digital infrastructure and 
-            consulting firm focused on building secure, scalable technology 
-            systems aligned with governance and regulatory standards.
+
+          <p className="mt-6 text-lg text-gray-200">
+            Engineering secure digital infrastructure and enterprise
+            technology systems for organizations across industries.
           </p>
         </div>
+
       </section>
 
       <section className="py-24">

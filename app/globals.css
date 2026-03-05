@@ -16,3 +16,8 @@ body {
   font-family: Inter, sans-serif;
   color: #111827;
 }
+:root {
+  --brand-primary: #0f172a;
+  --brand-dark: #020617;
+  --brand-light: #f8fafc;
+}

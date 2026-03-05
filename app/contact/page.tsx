@@ -97,6 +97,22 @@ export default function Contact() {
             </p>
           )}
         </form>
+
+        <div className="space-y-4 mt-10">
+
+          <p className="flex items-center gap-3">
+            📍 Johannesburg, South Africa
+          </p>
+
+          <p className="flex items-center gap-3">
+            📞 +27 00 000 0000
+          </p>
+
+          <p className="flex items-center gap-3">
+            ✉ info@nomiah.com
+          </p>
+
+        </div>
       </div>
     </div>
   );

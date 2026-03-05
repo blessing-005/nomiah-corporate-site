@@ -34,9 +34,8 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-4">Contact</h4>
           <ul className="space-y-2 text-gray-300">
-            <li>Johannesburg, South Africa</li>
-            <li><a href="mailto:info@nomiah.com" className="hover:text-white transition">info@nomiah.com</a></li>
-            <li><a href="mailto:security@nomiah.com" className="hover:text-white transition">security@nomiah.com</a></li>
+            <li><p>📞 +27 00 000 0000</p></li>
+            <li><p>📍 Johannesburg, South Africa</p></li>
           </ul>
         </div>
 
