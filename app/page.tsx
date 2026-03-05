@@ -5,32 +5,49 @@ export default function Home() {
     <div>
 
       {/* Hero Section */}
-      <section className="bg-white py-32">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-semibold leading-tight text-[var(--color-primary)]">
-            Building Secure Digital Infrastructure for Modern Enterprises
+      <section className="relative h-[90vh] flex items-center justify-center text-white">
+
+        <video
+          autoPlay
+          muted
+          loop
+          className="absolute w-full h-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        <div className="relative z-10 text-center max-w-4xl px-6">
+
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+            Engineering Secure Digital Infrastructure
+            for Africa and Beyond
           </h1>
-          <p className="mt-6 text-lg text-gray-600">
-            Governance-led software engineering, cybersecurity, and regulatory-aligned
-            digital transformation solutions across South Africa and globally.
+
+          <p className="mt-6 text-lg text-gray-200">
+            Enterprise software engineering, cybersecurity systems,
+            and governance-aligned digital transformation.
           </p>
 
           <div className="mt-10 flex justify-center gap-6">
-            <Link
+            <a
               href="/contact"
-              className="bg-[var(--color-primary)] text-white px-6 py-3 rounded-md font-semibold hover:bg-[var(--color-primary-dark)] transition"
+              className="bg-[var(--color-primary)] px-6 py-3 rounded-md font-semibold"
             >
-              Speak to Enterprise Team
-            </Link>
+              Book Consultation
+            </a>
 
-            <Link
+            <a
               href="/services"
-              className="border border-[var(--color-primary)] text-[var(--color-primary)] px-6 py-3 rounded-md font-semibold hover:bg-gray-50 transition"
+              className="border border-white px-6 py-3 rounded-md"
             >
               Explore Capabilities
-            </Link>
+            </a>
           </div>
+
         </div>
+
       </section>
 
       {/* Governance Strip */}

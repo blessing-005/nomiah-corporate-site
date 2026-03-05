@@ -36,14 +36,23 @@ export default function Footer() {
           <ul className="space-y-2 text-gray-300">
             <li>Johannesburg, South Africa</li>
             <li>info@nomiah.com</li>
+            <a href="mailto:info@nomiah.com">info@nomiah.com</a>
             <li>security@nomiah.com</li>
           </ul>
         </div>
 
       </div>
 
-      <div className="border-t border-gray-600 py-6 text-center text-xs text-gray-400">
-        © {new Date().getFullYear()} NOMIAH (Pty) Ltd. All rights reserved.
+      <div className="border-t border-gray-600 py-8 px-6">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 text-xs text-gray-300 mb-6">
+          <a href="/privacy-policy" className="hover:text-white transition">Privacy Policy</a>
+          <a href="/terms-of-service" className="hover:text-white transition">Terms of Service</a>
+          <a href="/cookie-policy" className="hover:text-white transition">Cookie Policy</a>
+          <a href="/responsible-disclosure" className="hover:text-white transition">Responsible Disclosure</a>
+        </div>
+        <div className="text-center text-xs text-gray-400">
+          © {new Date().getFullYear()} NOMIAH (Pty) Ltd. All rights reserved.
+        </div>
       </div>
     </footer>
   );
