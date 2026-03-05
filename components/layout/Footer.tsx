@@ -45,6 +45,8 @@ export default function Footer() {
 
       <div className="border-t border-gray-600 py-8 px-6">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-6 text-xs text-gray-300 mb-6">
+          <a href="/about" className="hover:text-white transition">About</a>
+          <a href="/careers" className="hover:text-white transition">Careers</a>
           <a href="/privacy-policy" className="hover:text-white transition">Privacy Policy</a>
           <a href="/terms-of-service" className="hover:text-white transition">Terms of Service</a>
           <a href="/cookie-policy" className="hover:text-white transition">Cookie Policy</a>

@@ -16,6 +16,7 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden md:flex gap-8 font-medium">
+          <Link href="/about">About</Link>
           <Link href="/services">Services</Link>
           <Link href="/governance">Governance</Link>
           <Link href="/contact">Contact</Link>
