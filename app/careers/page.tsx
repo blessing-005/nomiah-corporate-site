@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Careers() {
   return (
     <div className="bg-white">
@@ -13,6 +14,42 @@ export default function Careers() {
             Join a team dedicated to engineering secure digital infrastructure 
             and building the future of enterprise technology.
           </p>
+
+        </div>
+      </section>
+
+      <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+          <Image
+            src="/images/team-meeting.jpg"
+            alt="Corporate strategy meeting"
+            width={600}
+            height={400}
+            className="rounded-xl"
+          />
+
+          <div>
+            <h2 className="text-3xl font-semibold text-[var(--color-primary)]">
+              Our Mission
+            </h2>
+
+            <p className="mt-4 text-gray-600">
+              To engineer secure digital infrastructure that empowers organizations,
+              governments, and innovators across Africa and globally to operate with
+              efficiency, resilience, and technological excellence.
+            </p>
+
+            <h2 className="text-3xl font-semibold text-[var(--color-primary)] mt-10">
+              Our Vision
+            </h2>
+
+            <p className="mt-4 text-gray-600">
+              To become a leading global technology infrastructure group delivering
+              governance-driven digital transformation across industries and
+              emerging economies.
+            </p>
+          </div>
 
         </div>
       </section>
