@@ -5,7 +5,7 @@ export default function Home() {
     <div>
 
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-center text-white">
+      <section className="relative h-[70vh] flex items-center justify-center text-white">
 
         <video
           autoPlay
@@ -186,40 +186,6 @@ export default function Home() {
           <div>Enterprise MSA Ready</div>
           <div>Business Continuity Framework</div>
           <div>Risk Management Structured</div>
-        </div>
-      </section>
-
-      {/* Capabilities Overview */}
-      <section className="py-24 bg-light">
-        <div className="max-w-6xl mx-auto px-6">
-
-          <h2 className="text-3xl font-semibold text-center text-[var(--color-primary)] mb-16">
-            Strategic Capabilities
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-12 text-center">
-            <div>
-              <h3 className="font-semibold mb-3">Enterprise Software Engineering</h3>
-              <p className="text-gray-600 text-sm">
-                Secure, scalable custom platforms built for regulated and growth-focused environments.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-3">Cybersecurity & IT Infrastructure</h3>
-              <p className="text-gray-600 text-sm">
-                Secure-by-design systems architecture and infrastructure governance.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold mb-3">Regulatory & Compliance Advisory</h3>
-              <p className="text-gray-600 text-sm">
-                POPIA-aligned frameworks and ISO 27001-structured information security systems.
-              </p>
-            </div>
-          </div>
-
         </div>
       </section>
 

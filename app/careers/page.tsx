@@ -102,28 +102,82 @@ export default function Careers() {
         <div className="max-w-6xl mx-auto px-6">
 
           <h2 className="text-3xl font-semibold text-[var(--color-primary)]">
-            Open Positions
+            Apply Now
           </h2>
 
-          <div className="mt-10 border rounded-lg p-8">
+          <form
+            action="mailto:careers@nomiah.com"
+            method="post"
+            encType="multipart/form-data"
+            className="max-w-3xl mx-auto mt-16 space-y-6"
+          >
 
-            <h3 className="text-xl font-semibold">
-              Software Engineer (Full Stack)
-            </h3>
+            <input
+              type="text"
+              name="name"
+              placeholder="Full Name"
+              required
+              className="w-full border p-3 rounded-md"
+            />
 
-            <p className="mt-4 text-gray-600">
-              We are looking for engineers passionate about building secure 
-              web applications and scalable enterprise systems.
-            </p>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+              className="w-full border p-3 rounded-md"
+            />
 
-            <a
-              href="mailto:careers@nomiah.com"
-              className="inline-block mt-6 bg-[var(--color-primary)] text-white px-6 py-3 rounded-md"
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              className="w-full border p-3 rounded-md"
+            />
+
+            <input
+              type="text"
+              name="role"
+              placeholder="Role You Are Applying For"
+              className="w-full border p-3 rounded-md"
+            />
+
+            <input
+              type="url"
+              name="portfolio"
+              placeholder="LinkedIn or Portfolio URL"
+              className="w-full border p-3 rounded-md"
+            />
+
+            <div>
+              <label className="block mb-2 font-medium">
+                Upload CV
+              </label>
+
+              <input
+                type="file"
+                name="cv"
+                accept=".pdf,.doc,.docx"
+                required
+                className="w-full border p-3 rounded-md"
+              />
+            </div>
+
+            <textarea
+              name="message"
+              placeholder="Tell us about yourself"
+              rows={4}
+              className="w-full border p-3 rounded-md"
+            />
+
+            <button
+              type="submit"
+              className="bg-[var(--color-primary)] text-white px-8 py-3 rounded-md"
             >
-              Apply Now
-            </a>
+              Submit Application
+            </button>
 
-          </div>
+          </form>
 
         </div>
       </section>
