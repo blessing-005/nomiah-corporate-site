@@ -21,12 +21,13 @@ export default function Navbar() {
           <Link href="/contact">Contact</Link>
         </nav>
 
-        <Link
-          href="/contact"
-          className="bg-[var(--color-primary)] text-white px-5 py-2 rounded-md font-semibold hover:opacity-90"
+        <a
+          href="https://calendly.com/nomiah-info/30min"
+          target="_blank"
+          className="bg-[var(--color-primary)] text-white px-5 py-2 rounded-md font-semibold"
         >
           Book Consultation
-        </Link>
+        </a>
 
       </div>
     </header>

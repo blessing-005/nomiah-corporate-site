@@ -167,7 +167,8 @@ export default function Home() {
 
           <div className="mt-10">
             <a
-              href="/contact"
+              href="https://calendly.com/nomiah-info/30min"
+              target="_blank"
               className="bg-[var(--color-primary)] text-white px-8 py-4 rounded-md font-semibold"
             >
               Schedule Consultation
