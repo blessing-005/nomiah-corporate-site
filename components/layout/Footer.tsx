@@ -36,7 +36,7 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-4">Contact</h4>
           <ul className="space-y-2 text-gray-300">
-            <li><p>📞 +27 00 000 0000</p></li>
+            <li><p>📞 010 500 8599</p></li>
             <li><p>📍 Johannesburg, South Africa</p></li>
           </ul>
         </div>
@@ -56,7 +56,7 @@ export default function Footer() {
         <div className="flex gap-6 mt-8 justify-center">
 
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/blessing-mathebula-29079b3b5"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white text-xl transition"
@@ -65,7 +65,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://facebook.com"
+            href="https://facebook.com/profile.php?id=615856328871849"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white text-xl transition"
@@ -74,7 +74,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://x.com"
+            href="https://x.com/@Nomiah340118"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white text-xl transition"
