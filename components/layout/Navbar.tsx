@@ -9,7 +9,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="w-full bg-white border-b">
+    <header className="w-full bg-white border-b sticky top-0 z-50">
 
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
 
@@ -18,13 +18,42 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop menu */}
-        <nav className="hidden md:flex gap-8 font-medium">
+        <nav className="hidden md:flex gap-3">
 
-          <Link href="/about">About</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/governance">Governance</Link>
-          <Link href="/careers">Careers</Link>
-          <Link href="/contact">Contact</Link>
+          <Link
+            href="/about"
+            className="px-4 py-2 rounded-lg border hover:bg-gray-100 transition"
+          >
+            About
+          </Link>
+
+          <Link
+            href="/services"
+            className="px-4 py-2 rounded-lg border hover:bg-gray-100 transition"
+          >
+            Services
+          </Link>
+
+          <Link
+            href="/governance"
+            className="px-4 py-2 rounded-lg border hover:bg-gray-100 transition"
+          >
+            Governance
+          </Link>
+
+          <Link
+            href="/careers"
+            className="px-4 py-2 rounded-lg border hover:bg-gray-100 transition"
+          >
+            Careers
+          </Link>
+
+          <Link
+            href="/contact"
+            className="px-4 py-2 rounded-lg border hover:bg-gray-100 transition"
+          >
+            Contact
+          </Link>
 
         </nav>
 

@@ -6,9 +6,9 @@ export default function Governance() {
     <div className="bg-white">
 
       {/* Executive Header */}
-      <section className="relative h-[55vh] flex items-center justify-center text-white">
+      <section className="relative h-[80vh] flex items-center justify-center text-white">
         <Image
-          src="/images/governance.png"
+          src="/images/governance.jpg"
           alt="Governance"
           fill
           className="object-cover"

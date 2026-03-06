@@ -5,7 +5,7 @@ export default function Careers() {
   return (
     <div className="bg-white">
 
-      <section className="relative h-[55vh] flex items-center justify-center text-white">
+      <section className="relative h-[80vh] flex items-center justify-center text-white">
 
         <Image
           src="/images/team-working.jpg"

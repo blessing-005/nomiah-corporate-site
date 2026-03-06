@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaLinkedin, FaFacebook, FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -187,6 +188,31 @@ export default function Home() {
           <div>Business Continuity Framework</div>
           <div>Risk Management Structured</div>
         </div>
+      </section>
+
+      {/* Connect With NOMIAH Section */}
+      <section className="py-16 bg-[var(--color-primary-dark)] text-center text-white">
+
+        <h3 className="text-2xl font-semibold">
+          Connect With NOMIAH
+        </h3>
+
+        <div className="flex justify-center gap-8 mt-8 text-2xl">
+
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition">
+            <FaLinkedin />
+          </a>
+
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition">
+            <FaFacebook />
+          </a>
+
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition">
+            <FaXTwitter />
+          </a>
+
+        </div>
+
       </section>
 
     </div>

@@ -1,3 +1,5 @@
+import { FaLinkedin, FaFacebook, FaXTwitter } from "react-icons/fa6";
+
 export default function Footer() {
   return (
     <footer className="bg-[var(--color-primary-dark)] text-white mt-24">
@@ -50,7 +52,39 @@ export default function Footer() {
           <a href="/cookie-policy" className="hover:text-white transition">Cookie Policy</a>
           <a href="/responsible-disclosure" className="hover:text-white transition">Responsible Disclosure</a>
         </div>
-        <div className="text-center text-xs text-gray-400">
+
+        <div className="flex gap-6 mt-8 justify-center">
+
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white text-xl transition"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white text-xl transition"
+          >
+            <FaFacebook />
+          </a>
+
+          <a
+            href="https://x.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white text-xl transition"
+          >
+            <FaXTwitter />
+          </a>
+
+        </div>
+
+        <div className="text-center text-xs text-gray-400 mt-8">
           © {new Date().getFullYear()} NOMIAH (Pty) Ltd. All rights reserved.
         </div>
       </div>

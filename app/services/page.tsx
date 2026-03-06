@@ -7,10 +7,10 @@ export default function Services() {
     <div className="bg-white">
 
       {/* Header */}
-      <section className="relative h-[55vh] flex items-center justify-center text-white">
+      <section className="relative h-[80vh] flex items-center justify-center text-white">
 
         <Image
-          src="/images/cybersecurity.png"
+          src="/images/cybersecurity.jpg"
           alt="Cybersecurity"
           fill
           className="object-cover"

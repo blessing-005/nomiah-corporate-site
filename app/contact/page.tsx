@@ -1,17 +1,36 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Contact() {
   return (
-    <div className="bg-white py-28">
-      <div className="max-w-4xl mx-auto px-6">
-        <h1 className="text-4xl font-semibold text-[var(--color-primary)] text-center">
-          Enterprise Contact
-        </h1>
-        <p className="text-gray-600 text-center mt-4">
-          For enterprise partnerships, compliance consultation, or infrastructure engagement.
-        </p>
+    <div className="bg-white">
 
-        <form className="mt-16 space-y-6 max-w-3xl mx-auto">
+      <section className="relative h-[55vh] flex items-center justify-center text-white">
+
+        <Image
+          src="/images/contact.jpg"
+          alt="Contact"
+          fill
+          className="object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        <div className="relative z-10 text-center max-w-3xl px-6">
+          <h1 className="text-5xl font-bold">Get In Touch</h1>
+
+          <p className="mt-6 text-lg text-gray-200">
+            Enterprise partnerships, compliance consultation, or infrastructure engagement.
+          </p>
+        </div>
+
+      </section>
+
+      <div className="py-28">
+        <div className="max-w-4xl mx-auto px-6">
+
+          <form className="space-y-6 max-w-3xl mx-auto">
 
           <input
             type="text"
@@ -63,9 +82,9 @@ export default function Contact() {
             Submit Inquiry
           </button>
 
-        </form>
+          </form>
 
-        <div className="space-y-4 mt-10">
+          <div className="space-y-4 mt-10">
 
           <p className="flex items-center gap-3">
             📍 Johannesburg, South Africa
@@ -79,6 +98,7 @@ export default function Contact() {
             ✉ info@nomiah.com
           </p>
 
+          </div>
         </div>
       </div>
     </div>
