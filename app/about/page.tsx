@@ -27,29 +27,32 @@ export default function About() {
       </section>
 
       <section className="py-24">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+        <div className="max-w-6xl mx-auto px-6">
 
-          <div>
-            <h2 className="text-3xl font-semibold text-[var(--color-primary)]">
-              Our Mission
-            </h2>
-            <p className="mt-4 text-gray-600">
-              To engineer secure digital infrastructure that empowers 
-              organizations, governments, and innovators across Africa 
-              and globally to operate with efficiency, resilience, and 
-              technological excellence.
-            </p>
-          </div>
+          <div className="grid md:grid-cols-2 gap-10 mt-16">
 
-          <div>
-            <h2 className="text-3xl font-semibold text-[var(--color-primary)]">
-              Our Vision
-            </h2>
-            <p className="mt-4 text-gray-600">
-              To become a leading global technology infrastructure group 
-              delivering governance-driven digital transformation across 
-              industries and emerging economies.
-            </p>
+            <div className="p-10 rounded-2xl bg-gray-100 shadow">
+
+              <h3 className="text-2xl font-semibold">Our Mission</h3>
+
+              <p className="mt-4 text-gray-600">
+                Engineering secure digital infrastructure and
+                enterprise technology systems.
+              </p>
+
+            </div>
+
+            <div className="p-10 rounded-2xl bg-gray-100 shadow">
+
+              <h3 className="text-2xl font-semibold">Our Vision</h3>
+
+              <p className="mt-4 text-gray-600">
+                To become a global technology infrastructure
+                and consulting group.
+              </p>
+
+            </div>
+
           </div>
 
         </div>

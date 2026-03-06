@@ -1,45 +1,6 @@
 "use client";
 
-import { useState } from "react";
-
 export default function Contact() {
-  const [loading, setLoading] = useState(false);
-  const [status, setStatus] = useState("");
-
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatus("");
-
-    const formData = new FormData(e.target);
-
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      company: formData.get("company"),
-      message: formData.get("message"),
-    };
-
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    const result = await res.json();
-
-    if (result.success) {
-      setStatus("Inquiry submitted successfully.");
-      e.target.reset();
-    } else {
-      setStatus("Submission failed. Please try again.");
-    }
-
-    setLoading(false);
-  };
-
   return (
     <div className="bg-white py-28">
       <div className="max-w-4xl mx-auto px-6">
@@ -50,52 +11,58 @@ export default function Contact() {
           For enterprise partnerships, compliance consultation, or infrastructure engagement.
         </p>
 
-        <form
-          onSubmit={handleSubmit}
-          className="mt-16 space-y-6"
-        >
+        <form className="mt-16 space-y-6 max-w-3xl mx-auto">
+
           <input
-            name="name"
+            type="text"
             placeholder="Full Name"
-            required
-            className="w-full border px-4 py-3 rounded-md"
+            className="w-full border p-4 rounded-lg"
           />
 
           <input
-            name="email"
+            type="text"
+            placeholder="Job Title"
+            className="w-full border p-4 rounded-lg"
+          />
+
+          <input
             type="email"
-            placeholder="Work Email"
-            required
-            className="w-full border px-4 py-3 rounded-md"
+            placeholder="Business Email"
+            className="w-full border p-4 rounded-lg"
           />
 
           <input
-            name="company"
+            type="text"
             placeholder="Company Name"
-            className="w-full border px-4 py-3 rounded-md"
+            className="w-full border p-4 rounded-lg"
           />
+
+          <input
+            type="text"
+            placeholder="Company Location"
+            className="w-full border p-4 rounded-lg"
+          />
+
+          <select className="w-full border p-4 rounded-lg">
+
+            <option>Inquiry Type</option>
+            <option>Enterprise Discussion</option>
+            <option>Book Consultation</option>
+            <option>Explore Capabilities</option>
+            <option>Partnership Inquiry</option>
+
+          </select>
 
           <textarea
-            name="message"
-            placeholder="Describe your inquiry"
-            rows={6}
-            required
-            className="w-full border px-4 py-3 rounded-md"
+            placeholder="Tell us about your project"
+            rows={5}
+            className="w-full border p-4 rounded-lg"
           />
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-[var(--color-primary)] text-white py-3 rounded-md font-semibold hover:bg-[var(--color-primary-dark)] transition"
-          >
-            {loading ? "Submitting..." : "Submit Enterprise Inquiry"}
+          <button className="bg-[var(--color-primary)] text-white px-8 py-4 rounded-lg w-full font-semibold">
+            Submit Inquiry
           </button>
 
-          {status && (
-            <p className="text-center text-sm text-gray-600 mt-4">
-              {status}
-            </p>
-          )}
         </form>
 
         <div className="space-y-4 mt-10">

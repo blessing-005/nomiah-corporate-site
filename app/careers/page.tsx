@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Plus } from "lucide-react";
 
 export default function Careers() {
   return (
@@ -98,10 +99,13 @@ export default function Careers() {
               className="w-full border p-4 rounded-lg"
             />
 
-            <input
-              type="file"
-              className="w-full border p-4 rounded-lg"
-            />
+            <div className="flex items-center gap-2 w-full border p-4 rounded-lg cursor-pointer">
+              <Plus size={20} className="text-[var(--color-primary)]" />
+              <input
+                type="file"
+                className="w-full"
+              />
+            </div>
 
             <textarea
               placeholder="Tell us about yourself"
@@ -114,6 +118,14 @@ export default function Careers() {
             >
               Apply Now
             </button>
+
+            <p className="text-sm text-gray-500 mt-4 text-center">
+              Prefer to apply directly?<br />
+              Send your CV to{" "}
+              <a href="mailto:careers@nomiah.com" className="text-blue-600 hover:underline">
+                careers@nomiah.com
+              </a>
+            </p>
 
           </form>
 

@@ -1,19 +1,28 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Governance() {
   return (
     <div className="bg-white">
 
       {/* Executive Header */}
-      <section className="py-28 bg-[var(--color-primary)] text-white">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-semibold">
+      <section className="relative h-[55vh] flex items-center justify-center text-white">
+        <Image
+          src="/images/governance.png"
+          alt="Governance"
+          fill
+          className="object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        <div className="relative z-10 text-center max-w-3xl px-6">
+          <h1 className="text-5xl font-bold">
             Governance, Risk & Compliance Framework
           </h1>
           <p className="mt-6 text-lg text-gray-200">
             NOMIAH operates under structured governance policies, risk-managed
-            delivery frameworks, and ISO 27001-aligned information security
-            architecture to support enterprise-grade engagements.
+            delivery frameworks, and ISO 27001-aligned information security.
           </p>
         </div>
       </section>

@@ -1,86 +1,82 @@
 import Link from "next/link";
+import Image from "next/image";
+import { ShieldCheck, Code, Smartphone, Globe, Megaphone } from "lucide-react";
 
 export default function Services() {
   return (
     <div className="bg-white">
 
       {/* Header */}
-      <section className="py-28 bg-[var(--color-primary)] text-white">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-semibold">
-            Enterprise Digital Infrastructure & Strategic Capabilities
-          </h1>
-          <p className="mt-6 text-lg text-gray-200">
-            NOMIAH delivers governance-aligned technology systems designed
-            for regulatory environments, growth-focused enterprises, and
-            mission-critical digital operations.
-          </p>
-        </div>
+      <section className="relative h-[55vh] flex items-center justify-center text-white">
+
+        <Image
+          src="/images/cybersecurity.png"
+          alt="Cybersecurity"
+          fill
+          className="object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        <h1 className="relative text-5xl font-bold">
+          Our Services
+        </h1>
+
       </section>
 
       {/* Core Capabilities */}
       <section className="py-24">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+        <div className="max-w-6xl mx-auto px-6">
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[var(--color-primary)]">
-              Enterprise Software Engineering
-            </h2>
-            <p className="mt-4 text-gray-600">
-              Secure, scalable custom web and mobile platforms engineered with
-              structured architecture, DevSecOps lifecycle integration, and
-              compliance-aligned data models.
-            </p>
-          </div>
+          <h2 className="text-3xl font-semibold text-center text-[var(--color-primary)] mb-6">
+            Our Services
+          </h2>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[var(--color-primary)]">
-              IT Infrastructure & Cybersecurity
-            </h2>
-            <p className="mt-4 text-gray-600">
-              Secure-by-design infrastructure deployment, access governance,
-              risk modeling, and resilience-driven cybersecurity frameworks.
-            </p>
-          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[var(--color-primary)]">
-              Regulatory Compliance & Data Protection Advisory
-            </h2>
-            <p className="mt-4 text-gray-600">
-              POPIA-aligned data protection strategies, ISO 27001-aligned ISMS
-              implementation guidance, and risk-governed compliance structuring.
-            </p>
-          </div>
+            <div className="p-8 border rounded-xl hover:shadow-lg transition">
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[var(--color-primary)]">
-              Digital Growth & Marketing Infrastructure
-            </h2>
-            <p className="mt-4 text-gray-600">
-              Data-driven digital ecosystems integrating analytics,
-              conversion systems, automation frameworks, and scalable lead pipelines.
-            </p>
-          </div>
+              <ShieldCheck size={40} className="text-[var(--color-primary)]"/>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[var(--color-primary)]">
-              Public Relations & Brand Strategy
-            </h2>
-            <p className="mt-4 text-gray-600">
-              Corporate communication strategy, reputation governance,
-              and structured brand positioning frameworks for enterprise visibility.
-            </p>
-          </div>
+              <h3 className="mt-6 font-semibold text-xl">
+                IT Infrastructure & Cybersecurity
+              </h3>
 
-          <div>
-            <h2 className="text-2xl font-semibold text-[var(--color-primary)]">
-              Enterprise Digital Transformation Consulting
-            </h2>
-            <p className="mt-4 text-gray-600">
-              Board-level strategic advisory for digital restructuring,
-              systems modernization, and operational transformation execution.
-            </p>
+              <p className="mt-4 text-gray-600">
+                Secure enterprise systems, infrastructure architecture,
+                and cybersecurity protection.
+              </p>
+
+            </div>
+
+            <div className="p-8 border rounded-xl hover:shadow-lg transition">
+
+              <Code size={40} className="text-[var(--color-primary)]"/>
+
+              <h3 className="mt-6 font-semibold text-xl">
+                Custom Software Development
+              </h3>
+
+              <p className="mt-4 text-gray-600">
+                Enterprise platforms and scalable software systems.
+              </p>
+
+            </div>
+
+            <div className="p-8 border rounded-xl hover:shadow-lg transition">
+
+              <Smartphone size={40} className="text-[var(--color-primary)]"/>
+
+              <h3 className="mt-6 font-semibold text-xl">
+                Mobile App Development
+              </h3>
+
+              <p className="mt-4 text-gray-600">
+                Secure mobile applications for modern digital businesses.
+              </p>
+
+            </div>
+
           </div>
 
         </div>

@@ -11,10 +11,10 @@ export default function Navbar() {
   return (
     <header className="w-full bg-white border-b">
 
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
 
         <Link href="/">
-          <Image src="/logo.png" alt="NOMIAH" width={150} height={40}/>
+          <Image src="/logo.png" alt="NOMIAH" width={130} height={40}/>
         </Link>
 
         {/* Desktop menu */}
