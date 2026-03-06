@@ -1,7 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import CookieBanner from "@/components/CookieBanner";
+import CookieConsent from "@/components/CookieConsent";
 import { ReactNode } from "react";
 
 export const metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <CookieBanner />
+        <CookieConsent />
       </body>
     </html>
   );
