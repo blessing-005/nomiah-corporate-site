@@ -51,6 +51,23 @@ export default function Home() {
 
       </section>
 
+      {/* Enterprise Trust Bar */}
+      <section className="bg-[var(--color-primary-dark)] text-white py-6">
+
+        <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-8 text-sm">
+
+          <span>✔ POPIA Compliant</span>
+
+          <span>✔ ISO-27001 Aligned Security</span>
+
+          <span>✔ Enterprise Governance Framework</span>
+
+          <span>✔ Secure Digital Infrastructure</span>
+
+        </div>
+
+      </section>
+
       {/* Credibility Strip */}
       <section className="bg-white py-20 border-t">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10 text-center">

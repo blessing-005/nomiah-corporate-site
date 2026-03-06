@@ -1,12 +1,15 @@
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import CookieBanner from "@/components/CookieBanner";
 import { ReactNode } from "react";
 
 export const metadata = {
-  title: "NOMIAH (Pty) Ltd | Enterprise Digital Infrastructure",
-  description:
-    "Enterprise software engineering, cybersecurity, compliance advisory and digital transformation services across South Africa and globally.",
+  title: "NOMIAH – Enterprise Digital Infrastructure",
+  description: "Enterprise software engineering and digital infrastructure consulting.",
+  icons: {
+    icon: "/favicon.ico"
+  }
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -16,6 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );

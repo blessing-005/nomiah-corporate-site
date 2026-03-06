@@ -1,54 +1,73 @@
 export default function PrivacyPolicy() {
-  return (
+return (
 
-    <div className="bg-white">
+<div className="bg-white">
 
-      <section className="py-20 bg-[var(--brand-primary)] text-white text-center">
+<section className="py-20 bg-[var(--brand-primary)] text-white text-center">
 
-        <h1 className="text-4xl font-bold">
-          Privacy Policy
-        </h1>
+<h1 className="text-4xl font-bold">
+Privacy Policy
+</h1>
 
-        <p className="mt-4 text-gray-200">
-          NOMIAH (Pty) Ltd is committed to protecting personal information
-          in accordance with the Protection of Personal Information Act (POPIA).
-        </p>
+<p className="mt-4 text-gray-200">
+Last updated: {new Date().getFullYear()}
+</p>
 
-      </section>
+</section>
 
-      <section className="max-w-4xl mx-auto py-20 px-6 space-y-8">
+<section className="max-w-4xl mx-auto px-6 py-20 space-y-10">
 
-        <h2 className="text-2xl font-semibold">
-          Information We Collect
-        </h2>
+<h2 className="text-2xl font-semibold">
+1. Introduction
+</h2>
 
-        <p className="text-gray-600">
-          We may collect personal information including names, email
-          addresses, phone numbers, and company information when
-          users interact with our website.
-        </p>
+<p className="text-gray-600">
+NOMIAH (Pty) Ltd respects your privacy and is committed to protecting
+your personal data in accordance with the Protection of Personal
+Information Act (POPIA) and other applicable data protection laws.
+</p>
 
-        <h2 className="text-2xl font-semibold">
-          How We Use Information
-        </h2>
+<h2 className="text-2xl font-semibold">
+2. Information We Collect
+</h2>
 
-        <p className="text-gray-600">
-          Information is used to respond to inquiries, schedule
-          consultations, and provide professional services.
-        </p>
+<p className="text-gray-600">
+We may collect personal information such as your name, company,
+email address, phone number, and any details submitted through
+our inquiry or consultation forms.
+</p>
 
-        <h2 className="text-2xl font-semibold">
-          Data Protection
-        </h2>
+<h2 className="text-2xl font-semibold">
+3. Use of Information
+</h2>
 
-        <p className="text-gray-600">
-          NOMIAH maintains governance frameworks aligned with
-          information security best practices and regulatory standards.
-        </p>
+<p className="text-gray-600">
+Information collected is used to communicate with clients,
+schedule consultations, respond to inquiries, and deliver
+professional services.
+</p>
 
-      </section>
+<h2 className="text-2xl font-semibold">
+4. Data Protection
+</h2>
 
-    </div>
+<p className="text-gray-600">
+NOMIAH maintains governance structures including risk management,
+information security policies, and business continuity procedures
+aligned with international best practices.
+</p>
 
-  );
+<h2 className="text-2xl font-semibold">
+5. Contact
+</h2>
+
+<p className="text-gray-600">
+For privacy inquiries contact: privacy@nomiah.com
+</p>
+
+</section>
+
+</div>
+
+)
 }
