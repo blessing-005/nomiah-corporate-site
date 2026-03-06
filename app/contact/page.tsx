@@ -91,7 +91,7 @@ export default function Contact() {
           </p>
 
           <p className="flex items-center gap-3">
-            📞 +27 00 000 0000
+            📞 +27 10 500 8599
           </p>
 
           <p className="flex items-center gap-3">

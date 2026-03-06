@@ -35,10 +35,19 @@ export default function Footer() {
 
         <div>
           <h4 className="font-semibold mb-4">Contact</h4>
-          <ul className="space-y-2 text-gray-300">
-            <li><p>📞 010 500 8599</p></li>
-            <li><p>📍 Johannesburg, South Africa</p></li>
-          </ul>
+
+          <p className="text-gray-400">
+            📍 Johannesburg, South Africa
+          </p>
+
+          <p className="text-gray-400 mt-2">
+            📞 +27 10 500 8599
+          </p>
+
+          <p className="text-gray-400 mt-2">
+            ✉ info@nomiah.com
+          </p>
+
         </div>
 
       </div>
@@ -65,7 +74,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://facebook.com/profile.php?id=615856328871849"
+            href="https://facebook.com/profile.php?id=61585632887184"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white text-xl transition"
