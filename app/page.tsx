@@ -216,15 +216,15 @@ export default function Home() {
 
         <div className="flex justify-center gap-8 mt-8 text-2xl">
 
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition">
+          <a href="https://linkedin.com/in/blessing-mathebula-29079b3b5" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition">
             <FaLinkedin />
           </a>
 
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition">
+          <a href="https://facebook.com/profile.php?id=61585632887184" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition">
             <FaFacebook />
           </a>
 
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition">
+          <a href="https://x.com/@Nomiah340118" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition">
             <FaXTwitter />
           </a>
 
