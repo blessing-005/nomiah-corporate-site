@@ -139,6 +139,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Statistics Section */}
+      <section className="bg-[var(--brand-light)] py-20">
+
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
+
+          <div className="p-8 rounded-xl border shadow-sm">
+
+            <h3 className="text-4xl font-bold text-[var(--brand-primary)]">
+              25+
+            </h3>
+
+            <p className="mt-2 text-gray-600">
+              Projects Delivered
+            </p>
+
+          </div>
+
+          <div className="p-8 rounded-xl border shadow-sm">
+
+            <h3 className="text-4xl font-bold text-[var(--brand-primary)]">
+              15+
+            </h3>
+
+            <p className="mt-2 text-gray-600">
+              Happy Clients
+            </p>
+
+          </div>
+
+          <div className="p-8 rounded-xl border shadow-sm">
+
+            <h3 className="text-4xl font-bold text-[var(--brand-primary)]">
+              5+
+            </h3>
+
+            <p className="mt-2 text-gray-600">
+              Industries Served
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
       {/* Industries Section */}
       <section className="bg-[var(--color-primary-dark)] text-white py-24">
         <div className="max-w-7xl mx-auto px-6">
