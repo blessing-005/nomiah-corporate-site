@@ -86,26 +86,26 @@ export default function Contact() {
 
           <div className="space-y-4 mt-10">
 
-          <p className="flex items-center gap-3">
+          <p className="flex items-center gap-3 border border-gray-200 bg-gray-50 px-4 py-3 rounded-2xl hover:bg-gray-100 transition-all duration-150">
             📍 <a
-              href="https://www.google.com/maps/search/?api=1&query=Johannesburg%2C%20South%20Africa"
+              href="https://www.google.com/maps/search/?api=1&query=37%20Simmonds%20Street%2C%20Johannesburg%2C%20South%20Africa"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-[var(--color-primary)]"
-            >Johannesburg, South Africa</a>
+              className="text-[var(--color-primary)] font-medium"
+            >37 Simmonds Street, Johannesburg</a>
           </p>
 
-          <p className="flex items-center gap-3">
+          <p className="flex items-center gap-3 border border-gray-200 bg-gray-50 px-4 py-3 rounded-2xl hover:bg-gray-100 transition-all duration-150">
             📞 <a
               href="tel:+27105008299"
-              className="underline text-[var(--color-primary)]"
+              className="text-[var(--color-primary)] font-medium"
             >+27 10 500 8299</a>
           </p>
 
-          <p className="flex items-center gap-3">
+          <p className="flex items-center gap-3 border border-gray-200 bg-gray-50 px-4 py-3 rounded-2xl hover:bg-gray-100 transition-all duration-150">
             ✉ <a
               href="mailto:info@nomiah.com"
-              className="underline text-[var(--color-primary)]"
+              className="text-[var(--color-primary)] font-medium"
             >info@nomiah.com</a>
           </p>
 
