@@ -1,8 +1,54 @@
 "use client";
 
+import { FormEvent, useState } from "react";
 import Image from "next/image";
 
 export default function Contact() {
+  const [form, setForm] = useState({
+    name: "",
+    title: "",
+    email: "",
+    company: "",
+    location: "",
+    inquiry: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<{ type: "idle" | "sending" | "success" | "error"; message: string }>({ type: "idle", message: "" });
+
+  const handleChange = (field: string, value: string) => {
+    setForm((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus({ type: "sending", message: "Sending message..." });
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          company: form.company,
+          message: form.message,
+        }),
+      });
+
+      if (!res.ok) {
+        const json = await res.json();
+        throw new Error(json.error || "Unable to send message");
+      }
+
+      setStatus({ type: "success", message: "Your message has been sent successfully!" });
+      setForm({ name: "", title: "", email: "", company: "", location: "", inquiry: "", message: "" });
+    } catch (error: any) {
+      setStatus({ type: "error", message: error?.message || "Failed to send. Please try again." });
+    }
+  };
+
   return (
     <div className="bg-white">
 
@@ -30,58 +76,83 @@ export default function Contact() {
       <div className="py-28">
         <div className="max-w-4xl mx-auto px-6">
 
-          <form className="space-y-6 max-w-3xl mx-auto">
+          <form onSubmit={handleSubmit} className="space-y-6 max-w-3xl mx-auto">
+            {status.type !== "idle" && (
+              <div className={`rounded-lg px-4 py-3 ${status.type === "success" ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"}`}>
+                {status.message}
+              </div>
+            )}
 
-          <input
-            type="text"
-            placeholder="Full Name"
-            className="w-full border p-4 rounded-lg"
-          />
+            <input
+              type="text"
+              placeholder="Full Name"
+              value={form.name}
+              onChange={(e) => handleChange("name", e.target.value)}
+              className="w-full border p-4 rounded-lg"
+              required
+            />
 
-          <input
-            type="text"
-            placeholder="Job Title"
-            className="w-full border p-4 rounded-lg"
-          />
+            <input
+              type="text"
+              placeholder="Job Title"
+              value={form.title}
+              onChange={(e) => handleChange("title", e.target.value)}
+              className="w-full border p-4 rounded-lg"
+            />
 
-          <input
-            type="email"
-            placeholder="Business Email"
-            className="w-full border p-4 rounded-lg"
-          />
+            <input
+              type="email"
+              placeholder="Business Email"
+              value={form.email}
+              onChange={(e) => handleChange("email", e.target.value)}
+              className="w-full border p-4 rounded-lg"
+              required
+            />
 
-          <input
-            type="text"
-            placeholder="Company Name"
-            className="w-full border p-4 rounded-lg"
-          />
+            <input
+              type="text"
+              placeholder="Company Name"
+              value={form.company}
+              onChange={(e) => handleChange("company", e.target.value)}
+              className="w-full border p-4 rounded-lg"
+            />
 
-          <input
-            type="text"
-            placeholder="Company Location"
-            className="w-full border p-4 rounded-lg"
-          />
+            <input
+              type="text"
+              placeholder="Company Location"
+              value={form.location}
+              onChange={(e) => handleChange("location", e.target.value)}
+              className="w-full border p-4 rounded-lg"
+            />
 
-          <select className="w-full border p-4 rounded-lg">
+            <select
+              value={form.inquiry}
+              onChange={(e) => handleChange("inquiry", e.target.value)}
+              className="w-full border p-4 rounded-lg"
+            >
+              <option value="">Inquiry Type</option>
+              <option value="Enterprise Discussion">Enterprise Discussion</option>
+              <option value="Book Consultation">Book Consultation</option>
+              <option value="Explore Capabilities">Explore Capabilities</option>
+              <option value="Partnership Inquiry">Partnership Inquiry</option>
+            </select>
 
-            <option>Inquiry Type</option>
-            <option>Enterprise Discussion</option>
-            <option>Book Consultation</option>
-            <option>Explore Capabilities</option>
-            <option>Partnership Inquiry</option>
+            <textarea
+              placeholder="Tell us about your project"
+              rows={5}
+              value={form.message}
+              onChange={(e) => handleChange("message", e.target.value)}
+              className="w-full border p-4 rounded-lg"
+              required
+            />
 
-          </select>
-
-          <textarea
-            placeholder="Tell us about your project"
-            rows={5}
-            className="w-full border p-4 rounded-lg"
-          />
-
-          <button className="bg-[var(--color-primary)] text-white px-8 py-4 rounded-lg w-full font-semibold">
-            Submit Inquiry
-          </button>
-
+            <button
+              type="submit"
+              disabled={status.type === "sending"}
+              className="bg-[var(--color-primary)] text-white px-8 py-4 rounded-lg w-full font-semibold disabled:opacity-50"
+            >
+              {status.type === "sending" ? "Sending..." : "Submit Inquiry"}
+            </button>
           </form>
 
           <div className="space-y-4 mt-10">
