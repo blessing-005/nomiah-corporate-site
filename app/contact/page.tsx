@@ -87,15 +87,26 @@ export default function Contact() {
           <div className="space-y-4 mt-10">
 
           <p className="flex items-center gap-3">
-            📍 Johannesburg, South Africa
+            📍 <a
+              href="https://www.google.com/maps/search/?api=1&query=Johannesburg%2C%20South%20Africa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-[var(--color-primary)]"
+            >Johannesburg, South Africa</a>
           </p>
 
           <p className="flex items-center gap-3">
-            📞 +27 10 500 8599
+            📞 <a
+              href="tel:+27105008299"
+              className="underline text-[var(--color-primary)]"
+            >+27 10 500 8299</a>
           </p>
 
           <p className="flex items-center gap-3">
-            ✉ info@nomiah.com
+            ✉ <a
+              href="mailto:info@nomiah.com"
+              className="underline text-[var(--color-primary)]"
+            >info@nomiah.com</a>
           </p>
 
           </div>

@@ -41,7 +41,7 @@ export default function Footer() {
           </p>
 
           <p className="text-gray-400 mt-2">
-            📞 +27 10 500 8599
+            📞 +27 10 500 8299
           </p>
 
           <p className="text-gray-400 mt-2">
