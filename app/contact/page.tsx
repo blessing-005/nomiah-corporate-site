@@ -92,7 +92,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-[var(--color-primary)] font-medium"
-            >37 Simmonds Street, Johannesburg</a>
+            >Johannesburg, South Africa</a>
           </p>
 
           <p className="flex items-center gap-3 border border-gray-200 bg-gray-50 px-4 py-3 rounded-2xl hover:bg-gray-100 transition-all duration-150">
