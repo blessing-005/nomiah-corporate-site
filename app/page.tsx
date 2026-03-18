@@ -1,7 +1,92 @@
-import Link from "next/link";
+"use client";
+
+import { useEffect, useMemo, useRef, useState } from "react";
+import { animate } from "framer-motion";
 import { FaLinkedin, FaFacebook, FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
+  const stats = useMemo(
+    () => [
+      { label: "Projects Delivered", target: 25, suffix: "+" },
+      { label: "Happy Clients", target: 15, suffix: "+" },
+      { label: "Industries Served", target: 5, suffix: "+" },
+    ],
+    []
+  );
+
+  const [displayValues, setDisplayValues] = useState<number[]>(stats.map(() => 0));
+  const [animationFinished, setAnimationFinished] = useState(false);
+  const [typedText, setTypedText] = useState("");
+  const statsRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!statsRef.current) return;
+
+    let observer: IntersectionObserver | null = null;
+    let hasStarted = false;
+
+    const animateCounters = () => {
+      let completed = 0;
+
+      stats.forEach((item, idx) => {
+        animate(0, item.target, {
+          duration: 1.2,
+          ease: "easeOut",
+          onUpdate(value) {
+            setDisplayValues((prev) => {
+              const next = [...prev];
+              next[idx] = Math.round(value);
+              return next;
+            });
+          },
+          onComplete() {
+            completed += 1;
+            if (completed === stats.length) {
+              setAnimationFinished(true);
+            }
+          },
+        });
+      });
+    };
+
+    observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasStarted) {
+            hasStarted = true;
+            animateCounters();
+            if (observer) observer.disconnect();
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    observer.observe(statsRef.current);
+
+    return () => observer?.disconnect();
+  }, [stats]);
+
+  useEffect(() => {
+    if (!animationFinished) return;
+
+    const phrase = "Wouldn't you wish to be our next well serviced happy client";
+    let current = 0;
+
+    const typeInterval = setInterval(() => {
+      current += 1;
+      setTypedText(phrase.slice(0, current));
+
+      if (current >= phrase.length) {
+        clearInterval(typeInterval);
+      }
+    }, 40);
+
+    return () => clearInterval(typeInterval);
+  }, [animationFinished]);
+
   return (
     <div>
 
@@ -140,46 +225,21 @@ export default function Home() {
       </section>
 
       {/* Statistics Section */}
-      <section className="bg-[var(--brand-light)] py-20">
+      <section ref={statsRef} className="bg-[var(--brand-light)] py-20">
 
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
+          {stats.map((item, idx) => (
+            <div key={item.label} className="p-8 rounded-xl border shadow-sm">
+              <h3 className="text-4xl font-bold text-[var(--brand-primary)]">
+                {displayValues[idx]}{item.suffix}
+              </h3>
+              <p className="mt-2 text-gray-600">{item.label}</p>
+            </div>
+          ))}
+        </div>
 
-          <div className="p-8 rounded-xl border shadow-sm">
-
-            <h3 className="text-4xl font-bold text-[var(--brand-primary)]">
-              25+
-            </h3>
-
-            <p className="mt-2 text-gray-600">
-              Projects Delivered
-            </p>
-
-          </div>
-
-          <div className="p-8 rounded-xl border shadow-sm">
-
-            <h3 className="text-4xl font-bold text-[var(--brand-primary)]">
-              15+
-            </h3>
-
-            <p className="mt-2 text-gray-600">
-              Happy Clients
-            </p>
-
-          </div>
-
-          <div className="p-8 rounded-xl border shadow-sm">
-
-            <h3 className="text-4xl font-bold text-[var(--brand-primary)]">
-              5+
-            </h3>
-
-            <p className="mt-2 text-gray-600">
-              Industries Served
-            </p>
-
-          </div>
-
+        <div className="mt-8 text-center">
+          <p className="text-xl text-gray-700 min-h-[1.5rem]">{typedText}</p>
         </div>
 
       </section>
