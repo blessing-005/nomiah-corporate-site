@@ -2,6 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { ShieldCheck, Code, Smartphone, Globe, Megaphone } from "lucide-react";
 
+export const metadata = {
+  title: "Services | NOMIAH – Software Development, Cybersecurity & Consulting",
+  description: "Explore NOMIAH's enterprise software development, cybersecurity, digital infrastructure, and POPIA compliance services.",
+  keywords: [
+    "software development services",
+    "enterprise software solutions",
+    "cybersecurity services",
+    "digital infrastructure consulting",
+    "POPIA compliance support"
+  ]
+};
+
 export default function Services() {
   return (
     <div className="bg-white">

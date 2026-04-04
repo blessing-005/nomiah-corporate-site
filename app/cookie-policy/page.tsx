@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Cookie Policy | NOMIAH",
+  description: "NOMIAH's cookie policy explaining how we use cookies to improve your experience on our website."
+};
+
 export default function CookiePolicy() {
 return (
 

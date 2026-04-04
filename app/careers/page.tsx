@@ -1,6 +1,18 @@
 import Image from "next/image";
 import { Plus } from "lucide-react";
 
+export const metadata = {
+  title: "Careers at NOMIAH | Join Our Engineering Team",
+  description: "Join NOMIAH and work on secure digital infrastructure projects. We're hiring engineers, strategists, and innovators passionate about enterprise technology.",
+  keywords: [
+    "careers",
+    "jobs South Africa",
+    "software engineer jobs",
+    "technology careers",
+    "enterprise software jobs"
+  ]
+};
+
 export default function Careers() {
   return (
     <div className="bg-white">

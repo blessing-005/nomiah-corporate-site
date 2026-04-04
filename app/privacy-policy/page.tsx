@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Privacy Policy | NOMIAH",
+  description: "NOMIAH's privacy policy and commitment to protecting your personal data in accordance with POPIA and data protection laws."
+};
+
 export default function PrivacyPolicy() {
 return (
 

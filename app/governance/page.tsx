@@ -1,6 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Governance, Risk & Compliance | NOMIAH",
+  description: "NOMIAH's ISO 27001-aligned governance framework, risk management, and compliance policies for secure digital infrastructure.",
+  keywords: [
+    "governance framework",
+    "ISO 27001",
+    "risk management",
+    "compliance",
+    "information security"
+  ]
+};
+
 export default function Governance() {
   return (
     <div className="bg-white">

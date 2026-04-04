@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Responsible Disclosure Policy | NOMIAH",
+  description: "NOMIAH's responsible disclosure policy for reporting security vulnerabilities and our commitment to security."
+};
+
 export default function ResponsibleDisclosure() {
 return (
 

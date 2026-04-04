@@ -1,5 +1,17 @@
 import Image from "next/image"
 
+export const metadata = {
+  title: "About NOMIAH | Enterprise Software & Digital Infrastructure Leaders",
+  description: "Learn about NOMIAH's mission to engineer secure digital infrastructure and enterprise technology systems for organizations worldwide.",
+  keywords: [
+    "about NOMIAH",
+    "enterprise software company",
+    "digital infrastructure experts",
+    "technology leadership",
+    "South African software company"
+  ]
+};
+
 export default function About() {
   return (
     <div className="bg-white">

@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Terms of Service | NOMIAH",
+  description: "NOMIAH's terms of service outlining the agreement and conditions for using our website and services."
+};
+
 export default function TermsOfService() {
 return (
 
